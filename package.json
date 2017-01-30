@@ -12,7 +12,10 @@
     "body-parser": "^1.14.2",
     "express": "^4.13.3",
     "express-handlebars": "^2.0.1",
+    "google-auth-library": "^0.10.0",
+    "googleapis": "^16.1.0",
     "method-override": "^2.3.5",
+    "moment": "^2.17.1",
     "mysql": "^2.10.2"
   },
   "devDependencies": {

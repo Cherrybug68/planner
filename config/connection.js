@@ -5,8 +5,8 @@ var connection = mysql.createConnection({
   port: 3306,
   host: "localhost",
   user: "root",
-  password: "?????",
-  database: "????"
+  password: "Knights#1",
+  database: "planner_db"
 });
 
 // Make connection.
@@ -20,3 +20,15 @@ connection.connect(function(err) {
 
 // Export connection for our ORM to use.
 module.exports = connection;
+
+
+// Google API account's
+// Service account name:
+// Planner_Project2
+// Service account ID:
+// planner-project2
+// Private key:
+// My Project-577a6166b4e8.json
+// Service account key:
+// 577a6166b4e805b6ad8c7503b0ab110c6faceb2e
+
