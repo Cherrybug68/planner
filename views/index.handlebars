@@ -1,56 +1,161 @@
-<h1>Cats!</h1>
+<!-- Header -->
+		<header id="header" role="banner">		
+			<div class="main-nav">
+				<div class="container">
+					<div class="header-top">
+						<div class="pull-right social-icons">
+							<a href="https://twitter.com/PlanTastic4"><i class="fa fa-twitter"></i></a>
+							<a href="https://www.facebook.com/plan.tastic.16"><i class="fa fa-facebook"></i></a>
+							<a href="https://accounts.google.com/ServiceLogin?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ltmpl=default&service=mail&sacu=1&scc=1&passive=1209600&ignoreShadow=0&acui=1#Email=plantastic4%40gmail.com"><i class="fa fa-google-plus"></i></a>
+						</div>
+					</div>     
+					<div class="row">	        		
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="/">
+								<img class="img-responsive" src="/images/Plan_Tastic_Logo.jpg" alt="logo">
+							</a>
+						</div>
+						<div class="collapse navbar-collapse">
+							<ul class="nav navbar-nav navbar-right">                 
+								<li class="scroll active"><a href="#home">Home</a></li>
+								<li class="scroll"><a href="#about">About</a></li>
+								<li class="scroll"><a href="#calendar">Calendar</a></li>
+								<li class="scroll"><a href="#chart">Chart</a></li>
+								<li class="scroll"><a href="#footer">Contact</a></li>
+								<li class="scroll active"><a href="#home">Log In</a></li>    
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>                    
+		</header>
 
-<h2>Cats that are not sleepy!</h2>
 
-<ul>
-  {{#each cats}}
-    {{#unless this.sleepy}}
-      <li>
-        {{this.name}}
+		<section id="home">	
+			<div id="main-slider" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#main-slider" data-slide-to="0" class="active"></li>
+					<li data-target="#main-slider" data-slide-to="1"></li>
+					<li data-target="#main-slider" data-slide-to="2"></li>
+					<li data-target="#main-slider" data-slide-to="3"></li>
+					<li data-target="#main-slider" data-slide-to="4"></li>
+					<li data-target="#main-slider" data-slide-to="5"></li>
 
-        <form action="cats/update/{{this.id}}?_method=PUT" method="POST">
-          <input type="hidden" name="sleepy" value="true">
-          <button type="submit">SLEEP TIME!</button>
-        </form>
+				</ol>
+				<div class="carousel-inner">
+					<div class="item active">
+						<img class="img-responsive" src="images/slider/student_duotone_ocean.jpg" alt="slider">						
+						<div class="carousel-caption">
+							<h2>Learn to Better Manage Your Time</h2>
+						</div>
+					</div>
+					<div class="item">
+						<img class="img-responsive" src="images/slider/reading_duotone_ocean.jpg" alt="slider">	
+						<div class="carousel-caption">
+							<h2>By Tracking Your Day to Day Activities</h2>
+						</div>
+					</div>
+					<div class="item">
+						<img class="img-responsive" src="images/slider/meeting_duotone_ocean.jpg" alt="slider">	
+						<div class="carousel-caption">
+							<h2>Create Entries in the Calendar</h2>
+						</div>
+					</div>
+					<div class="item">
+						<img class="img-responsive" src="images/slider/sleep_duotone_ocean.jpg" alt="slider">	
+						<div class="carousel-caption">
+							<h2>Indicate the Type of Activity</h2>
+						</div>
+					</div>				
+					<div class="item">
+						<img class="img-responsive" src="images/slider/picnic_duotone_ocean.jpg" alt="slider">	
+						<div class="carousel-caption">
+							<h2>Review Which Activities You Spend The Most Time Doing</h2>
+						</div>
+					</div>							
+					<div class="item">
+						<img class="img-responsive" src="images/slider/startup_duotone_ocean.jpg" alt="slider">	
+						<div class="carousel-caption">
+							<h2>Also Recieve Reminders of Upcoming Activities</h2>
+						</div>
+					</div>							
+				</div>
+			</div>    	
+		</section>
 
-        {{> cats/delete-cat}}
-      </li>
-    {{/unless}}
-  {{/each}}
-</ul>
+		<!-- About Section -->
+		<section id="about">
+			<div class="clock">				
+			<img class="img-responsive" src="images/Plan_Tastic_Logo.jpg" alt="BWlogo">
+			</div>
+			<div class="about-content">					
+				<h2>About PlanTastic</h2>
+				<p>You have heard the saying that “Time is money”, well that phrase is true now more than ever. Unfortunately we don’t always use our time as wisely as we think we do. That is where PlanTastic comes in. This site will enable you to track your daily activities and see at a quick glance where you spend the bluk of your time. Thus allowing you to make adjustments to your daily routine to help you maxamize your time and thus be abel to be more efficient and make more MONEY!!!</p>				
+			</div>
+		</section>
 
-<h2>Cats that are sleepy!</h2>
+		<!-- Calendar Section -->
+		<section id="calendar">
+			<div class="container">
+					<div id="calendar_text" class="col-md-5">
+						<h2>Calendar</h2>
+						<p>In the Calendar you will enter your daily activities. Simply click and drag to select a block of time. Then indicate what 'type' of activity you will be doing (i.e. Work, Eat, Play, Class, Sleep). This information will be stored under your user login and can be accessed and updated anytime.</p>
+					</div>
+					<div id="calendar_sample" class="col-md-5">	
+						<img class="img-responsive" src="images/calendar.png" alt="calendar">
+					</div>
+			</div>	
+		</section>
 
-<ul>
-  {{#each cats}}
-    {{#if this.sleepy}}
-      <li>
-        {{this.name}}
+		<!-- Chart Section -->
+		<section id="chart">
+			<div class="graph">				
+			<img class="img-responsive" src="images/bar_chart_sample.png" alt="bar_chart">
+			</div>
+			<div class="chart-content">					
+				<h2>Time Tracker Chart</h2>
+				<p>The Time Tracker Chart will provide you a break down of how much time you are spending doing the various activities (i.e. Work, Eat, Play, Class, Sleep).</p>				
+			</div>
+		</section>
 
-        <form action="cats/update/{{this.id}}?_method=PUT" method="POST">
-          <input type="hidden" name="sleepy" value="false">
-          <button type="submit">WAKE UP!</button>
-        </form>
+		<!-- Footer - Includes copyright info for Shape Boot Strap template & Freepik Logo Art-->
+		<footer id="footer">
+			<div class="container">
+				<div class="text-center">
+					<p>Site develpopers:</p>
+					<ul style="list-style-type:none">
+						<li>Back End: Alana Creech (Project Manager) • David Bethelmy</li>
+						<li>Front End: Lisa Williams • Shari Smith</li>
+					</ul>	
+					<p> Copyright  &copy;2014<a target="_blank" href="http://shapebootstrap.net/"> Evento </a>Theme. All Rights Reserved. Designed by <a target="_blank" href="http://shapebootstrap.net/">ShapeBootstrap</a></p>
+					<a href="http://www.freepik.com/free-vector/business-background-design_1014320.htm">PlanTastic logo graphic Designed by Freepik</a>           
+				</div>
+			</div>
+		</footer>
 
-        {{> cats/delete-cat}}
-      </li>
-    {{/if}}
-  {{/each}}
-</ul>
+		<!-- Necessary Script tags -->
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+		<script type="text/javascript" src="js/gmaps.js"></script>
+		<script type="text/javascript" src="js/smoothscroll.js"></script>
+		<script type="text/javascript" src="js/jquery.parallax.js"></script>
+		<script type="text/javascript" src="js/coundown-timer.js"></script>
+		<script type="text/javascript" src="js/jquery.scrollTo.js"></script>
+		<script type="text/javascript" src="js/jquery.nav.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 
-<h2>Add a Cat</h2>
-<form class="create-update-form" action="cats/create" method="POST">
+		<!--Script tags for using Full Calendar-->
+		<script src='lib/jquery.min.js'></script>
+		<script src='lib/moment.min.js'></script>
+		<script src='fullcalendar/fullcalendar.js'></script>
 
-  <div class="form-group">
-    <label for="ca">Cat Name:</label>
-    <input type="text" id="ca" name="name">
-  </div>
-
-  <div class="form-group">
-    <label for="slee">Sleepy?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0"> Awake
-  </div>
-
-  <button type="submit">Add Cat</button>
-</form>
+		<!-- Script tag for Chart JS -->
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js'></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js'></script>
