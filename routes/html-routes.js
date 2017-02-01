@@ -14,9 +14,14 @@ module.exports = function(app) {
 
   // index route loads view.html
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname + "/../views/calendar-view.html"));
+    res.render("index");
   });
+
+  //   app.get("/", function(req, res) {
+  //   res.sendFile(path.join(__dirname + "/../views/calendar-view.html"));
+  // });
 
 };
 
 //../public/views/
+
