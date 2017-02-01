@@ -42,10 +42,10 @@ module.exports = function(app) {
 
   // index route loads view.html
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname + "/../homepage.html"));
+    res.sendFile(path.join(__dirname + "/../views/homepage.html"));
   });
 
-    app.get("/login", function(req, res) {
+    app.get("/nextPage", function(req, res) {
     res.sendFile(path.join(__dirname + "/../views/login.html"));
   });
 
