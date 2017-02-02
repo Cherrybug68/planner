@@ -49,6 +49,10 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname + "/../views/login.html"));
   });
 
+    app.get("/signup-page", function(req, res) {
+    res.sendFile(path.join(__dirname + "/../views/signup.html"));
+  });
+
   app.get("/dashboard", function(req, res) {
     res.sendFile(path.join(__dirname + "/../views/dashboard.html"));
   });
