@@ -1,4 +1,6 @@
-jQuery(function($) {'use strict',
+'use strict';
+
+jQuery(function($) {
 	
 	//Countdown js
 	//  $("#countdown").countdown({

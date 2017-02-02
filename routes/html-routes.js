@@ -45,8 +45,22 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname + "/../views/homepage.html"));
   });
 
-    app.get("/nextPage", function(req, res) {
+    app.get("/login-page", function(req, res) {
     res.sendFile(path.join(__dirname + "/../views/login.html"));
+  });
+
+  app.get("/dashboard", function(req, res) {
+    res.sendFile(path.join(__dirname + "/../views/dashboard.html"));
+  });
+
+  app.get("/tasks", function(req, res) {
+    res.sendFile(path.join(__dirname + "/../views/tasks.html"));
+  });
+// app.get("/reminders", function(req, res) {
+//     res.sendFile(path.join(__dirname + "/../views/reminders.html"));
+//   });
+app.get("/calendar-page", function(req, res) {
+    res.sendFile(path.join(__dirname + "/../views/calendar.html"));
   });
 
 };

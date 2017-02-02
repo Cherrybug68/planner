@@ -1,47 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Student Planner Calendar">
-	<meta name="author" content="Alana Creech, David Bethelmy, Lisa Williams, Shari Smith">
-
-	<title>Calendar</title>
-
-	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.css' />
-		<!--Full Calendar CSS Link-->
-	<link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
-
-	<link rel="stylesheet" href="/css/planner.css" type="text/css" />
-</head>
-
-<body>
-	<div id='wrap'>
-		<div id='external-events'>
-			<h4>Draggable Events</h4>
-			<div class='fc-event'>New Event</div>
-			<p>
-				<img src="/images/trashcan.png" id="trash" alt="">
-			</p>
-		</div>
-
-		<div id='calendar'></div>
-
-		<div style='clear:both'></div>
-
-		<xspan class="tt">x</xspan>
-
-	</div>
-
-       <script src="https://code.jquery.com/jquery.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
-<script
- src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
- integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
- crossorigin="anonymous"></script>
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.js"></script>
-	         <script src="/js/planner.js"></script>
-
-	</body>
-	</html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Plan-Tastic</title>
+        <!-- Bootstrap Core CSS -->
+        <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- MetisMenu CSS -->
+        <link href="/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="/css/style.css" rel="stylesheet">
+        <link href="/css/sb-admin-2.css" rel="stylesheet">
+        <!-- Morris Charts CSS -->
+        <link href="/vendor/morrisjs/morris.css" rel="stylesheet">
+        <!-- Custom Fonts -->
+        <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Lato|Pacifico|Roboto" rel="stylesheet">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                    <div class="login-panel panel panel-default">
+                        <div class="panel-body">
+                            <h2>Log In</h2>
+                            <hr>
+                            <form role="form">
+                                <fieldset>
+                                    <form class="login">
+                                        <div class="form-group">
+                                            <input class="form-control" placeholder="E-mail" name="email" type="email" id="email-input" autofocus>
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form-control" placeholder="Password" name="password" type="password" id="password-input" value="">
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input name="remember" type="checkbox" value="Remember Me">Remember Me
+                                            </label>
+                                        </div>
+                                        <!-- Change this to a button or input when using this as a form -->
+                                        <a href="dashboard" class="btn btn-lg btn-success btn-block" type="submit" >Login</a>
+                                        <br />
+                                        <p>Or sign up <a href="signup">here</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- jQuery -->
+<script src="/vendor/jquery/jquery.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!-- Metis Menu Plugin JavaScript -->
+<script src="/vendor/metisMenu/metisMenu.min.js"></script>
+<!-- Custom Theme JavaScript -->
+<script src="/js/login.js"></script>
+<script src="/js/admin.js"></script>
+</body>
+</html>
