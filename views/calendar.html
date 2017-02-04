@@ -13,19 +13,19 @@
 		<!-- Full Calendar Styles -->
 		<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.css' />
 		<!-- MetisMenu CSS -->
-		<link href="/v/metisMenu/metisMenu.min.css" rel="stylesheet">
+		<!--<link href="/v/metisMenu/metisMenu.min.css" rel="stylesheet">-->
 		<!-- Custom CSS -->
 		<link href="/css/lisa-style.css" rel="stylesheet">
-		<link href="/css/calendar-style.css" rel="stylesheet">
+		<!--<link href="/css/calendar-style.css" rel="stylesheet">-->
 		<link href="/css/style.css" rel="stylesheet">
 		<link href="/css/sb-admin-2.css" rel="stylesheet">
-		<link href="/css/planner.css" rel="stylesheet">
+		<!--<link href="/css/planner.css" rel="stylesheet">-->
 		<!-- Morris Charts CSS -->
-		<link href="/v/morrisjs/morris.css" rel="stylesheet">
+		<!--<link href="/v/morrisjs/morris.css" rel="stylesheet">-->
 		<!-- Custom Fonts -->
 		<link href="/v/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 		<!-- Google Fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Lato|Pacifico|Roboto" rel="stylesheet">
+		<!--<link href="https://fonts.googleapis.com/css?family=Lato|Pacifico|Roboto" rel="stylesheet">-->
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -216,25 +216,32 @@
 					<div id='external-events'>
 						<span id="drag-event">Draggable Events <i class="fa fa-level-down"></i><i class="fa fa-trash-o fa-lg" id="trash" alt=""></i></span>
 						<br>
-						<div class='fc-event' id="work">Work</div>
+						<div class='fc-event activites' id="work">Work</div>
 						
-						<div class='fc-event' id="exercise">Exercise</div>
+						<div class='fc-event activites' id="exercise">Exercise</div>
 						
-						<div class='fc-event' id="sleep">Sleep</div>
-						<div class='fc-event' id="homework">Homework</div>
-						<div class='fc-event' id="eat">Eat</div>
-						<div class='fc-event' id="commute">Commute</div>
+						<div class='fc-event activites' id="sleep">Sleep</div>
+						<div class='fc-event activites' id="homework">Homework</div>
+						<div class='fc-event activites' id="eat">Eat</div>
+						<div class='fc-event activites' id="commute">Commute</div>
 					</div>
 				</div>
-				
-				<div id='calendar'></div>
-				<div style='clear:both'></div>
-				<xspan class="tt">x</xspan>
 			</div>
 		</div>
 	</div>
 </div>
-</a>
+
+<div class="row">
+	<div class="col-lg-12">
+		<div class="panel-default">
+			<div class="panel-body">
+				<div id='calendar'></div>
+				<div style='clear:both'></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--</a>-->
 <br>
 
 <!--::::::::::::::::::::::
@@ -273,6 +280,7 @@
 		</div>
 	</div>
 </div>
+
 <!--:::::::::::::::::::::::::::::::::
 	WEEKLY REVIEW PANEL // #donut
 :::::::::::::::::::::::::::::::::::::-->

@@ -26,13 +26,18 @@ h2, body {
 #external-events .fc-event{
  display: inline-block; 
  font-size: 14px;
- padding: 4px;
+ width: 5.5em;
+ text-align: center;
+ padding: 2px;
+ margin-right: 2px;
+ 
 
 }
 
 .fc-header-toolbar{
 z-index: -1;
-height: 15px;
+height: 25px;
+padding-bottom: 1em;
 }
 
 .fc-toolbar h2{
@@ -45,6 +50,10 @@ height: 15px;
     background-color: rgba(0,0,0,.0001);
     background-image: -webkit-gradient(linear,0 0,0 100%,from(rgba(0,0,0,.0001)),to(rgba(0,0,0,.0001)));
 }
+
+.fc-unthemed td.fc-today{
+      background-color: #bce8f1;
+    }
 
 
 #drag-event{
@@ -96,7 +105,7 @@ box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
 font-family: 'Roboto', sans-serif;  
 text-align: center;
 margin-bottom: 5px;
-background-color: #ccc867; 
+background-color: fuchsia; 
 border: #e2e2e2;
 box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
 }  
@@ -105,9 +114,13 @@ box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
 font-family: 'Roboto', sans-serif;  
 text-align: center;
 margin-bottom: 5px;
-background-color: #b2ad3f; 
+background-color: coral; 
 border: #e2e2e2;
 box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+
+.activites{
+    
 }
 
 
