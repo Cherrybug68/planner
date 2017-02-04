@@ -29,6 +29,7 @@ $(document).ready(function() {
       password: password
     }).then(function(data) {
       window.location.replace(data);
+      alert("Sign Up Successful. Please Log In.");
     }).catch(function(err) {
       console.log(err);
     });

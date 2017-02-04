@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes)
 {
-    return sequelize.define("calendar", {
+    var calendar = sequelize.define("calendar", {
       title: {
         type: DataTypes.STRING(255),
         allowNull: false
@@ -28,4 +28,5 @@ module.exports = function(sequelize, DataTypes)
       tableName: 'calendar',
     });
 
+        return calendar;
 };
