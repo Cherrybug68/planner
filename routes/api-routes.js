@@ -13,7 +13,14 @@ module.exports = function(app) {
 
 app.get("/calendar", function(req, res) {
    //console.log(db);
-    db.calendar.findAll({raw: true})
+//   var query = 
+//db.calendar.sequelize.query("SELECT * FROM `users`", { type: sequelize.QueryTypes.SELECT})
+    db.calendar.findAll({
+      where: {user_id: req.user.id},
+      attributes: ['id', 'title', 'start', 'end', 'allDay', 'user_id'],
+       raw: true,
+       include: [db.User]
+      })
     .then(function(dbcalendar) {
       console.log(dbcalendar);
     res.send(dbcalendar);
@@ -25,7 +32,11 @@ app.post("/calendar/add-event", function(req, res) {
       title: req.body.title,
       start: req.body.start,
       end: req.body.end,
-      allDay: req.body.allDay
+      allDay: req.body.allDay,
+      user_id: req.user.id
+    },
+    {
+      include: [db.User]
     })
     .then(function(dbcalendar) {
        res.send({status: 'success', id: dbcalendar.id});
@@ -100,7 +111,7 @@ app.delete("/calendar/delete", function(req, res) {
     // Since we're doing a POST with javascript, we can't actually redirect that post into a GET request
     // So we're sending the user back the route to the members page because the redirect will happen on the front end
     // They won't get this or even be able to access this page if they aren't authed
-// console.log("Hereeeeeeee");
+//console.log("Hereeeeeeee");
     res.json("/dashboard");
    //res.redirect(307, "/dashboard");
   });
@@ -114,9 +125,7 @@ app.delete("/calendar/delete", function(req, res) {
       email: req.body.email,
       password: req.body.password
     }).then(function() {
-      // res.redirect(307, "/dashboard"); ///api/login");
-      console.log("signup");
-      res.json("/dashboard");
+      res.redirect(307, "/dashboard"); ///api/login");
     }).catch(function(err) {
       console.log(err);
       res.redirect(307, "/api/login");

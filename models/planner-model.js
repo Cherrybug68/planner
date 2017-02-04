@@ -17,6 +17,10 @@ module.exports = function(sequelize, DataTypes)
         type: DataTypes.BOOLEAN,
         allowNull: false,
         defaultValue: false
+      },
+      user_id: {
+        type: DataTypes.INTEGER(11),
+        allowNull: false
       }
     }, {
       timestamps: false,
@@ -26,6 +30,19 @@ module.exports = function(sequelize, DataTypes)
 
         // define the table's name
       tableName: 'calendar',
+
+      // We're saying that we want our Author to have Posts
+      classMethods: {
+        associate: function(models) {
+          // When we delete an Author, we'll also delete their Posts "cascade"
+          // An Author (foreignKey) is required or a Post can't be made
+          calendar.belongsTo(models.User,
+            {
+              onDelete: "cascade",
+              foreignKey: 'user_id'
+            });
+        }
+      }
     });
 
         return calendar;

@@ -18,8 +18,17 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     }
-  }, 
-     {
+  },
+        {
+      // We're saying that we want our User to have one calendar with many events
+      classMethods: {
+        associate: function(models) {
+          // Associating Author with Posts
+          User.hasMany(models.calendar,{
+              onDelete: "cascade"
+            });
+        }
+      },
     // Creating a custom method for our User model. This will check if an unhashed password entered by
     // The user can be compared to the hashed password stored in our database
     instanceMethods: {
